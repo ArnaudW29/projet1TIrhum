@@ -1,5 +1,5 @@
 # 1T-exemple-projet-final
-2019 - 2020 
+2019 - 2020 Aspects Structures et Données
 # Présentation de l'équipe
 - MUTTERER Matthieu 1TM2
 - WAETERMANS Arnaud 1TM2
