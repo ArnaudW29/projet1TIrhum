@@ -1,5 +1,6 @@
-# 1T-exemple-projet-final
+# 1T-projet-final
 Voici le repository pour notre projet creation de recettes de rhum en ligne.
+
 2019 - 2020 Aspects Structures et Données
 ## Présentation : 
 Nous sommes 2 élèves en TI de l'EPHEC Louvain-la-neuve.
@@ -29,3 +30,14 @@ Recette de rhum arrangé.
 	* afficher le prix de la recette
 	* afficher le temps necessaire pour la recette/temps de fermentation pour que le rhum arrive a maturation
 	* cliquer sur le like/dislike
+## TO DO LIST :
+* **backend** : 
+* [ ]  Creer les tables SQL.
+* [ ] Creer les services web pour initialiser la page et gérer les requetes/interactions.
+* [ ] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
+* **frontend** : 
+* [ ] Creer la page html et le css.
+* [ ] Creer un fichier js permettant:
+	* d'initaliser la page et les recettes.
+	* de permettre aux utilisateurs de mettre un Like/Dislike.
+	* de créer des recettes.
