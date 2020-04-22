@@ -3,8 +3,8 @@ Voici le repository pour notre projet creation de recettes de rhum en ligne.
 
 2019 - 2020 Aspects Structures et Données
 ## Présentation : 
-Nous sommes 2 élèves en TI de l'EPHEC Louvain-la-neuve.
-* MUTTERER Matthieu 1TM2
+Nous sommes 2 élèves en TI de l'[Ephec](https://www.ephec.be/) 
+* [MUTTERER Matthieu](https://github.com/Matthieu-mutterer) 1TM2
 * [WAETERMANS Arnaud](https://github.com/ArnaudW29) 1TM2
 ## Description :
 Recette de rhum arrangé.
