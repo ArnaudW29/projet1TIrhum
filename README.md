@@ -1,12 +1,15 @@
 # 1T-exemple-projet-final
 2019 - 2020 
-# Idée de projet: 
+# Présentation de l'équipe
+- MUTTERER Matthieu 1TM2
+- WAETERMANS Arnaud 1TM2
+# Description du projet 
 Recette de rhum arrangé
-
 L'idée est de mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité de ceux ci et une approximation du prix que le rhum coutera a la fabrication.
 On affiche le temps de maturation et de creation en fonction de la recette selectionné
 On mets un systeme de like/dislike en dessous de chaque recette.
 Ainsi qu'un formulaire pour ajouter des recettes personnels
+# Aspects implémentés
 1) backend : Une base de données avec les recettes de chaque rhum.
 2) backend : Un serveur web capable de fournir les pages html, js, css, ainsi que de proposer des webservices
 3) backend : Des webservices (avec les procédures associées) :
