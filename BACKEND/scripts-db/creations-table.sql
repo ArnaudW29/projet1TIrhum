@@ -5,8 +5,10 @@ Creation de la table contenant les noms des rhums et leurs id */
 CREATE TABLE tbNoms (
 nomId char(3) NOT NULL,         /*rO1,rO2*/
 nomNom VARCHAR(40) NOT NULL,
-constraint pk_Noms PRIMARY KEY (nomId)
+constraint pk_Noms PRIMARY KEY (nomId),
+constraint fk_tbNoms_tbRhum FOREIGN KEY (nomId) REFERENCES tbRhum (rhumId)
 );
+
 /* ARNAUD WAETERMANS 
 creation de la table contenant toutes les informations de la recette */
 
@@ -16,7 +18,14 @@ CREATE TABLE tbRhum (
  rhumPrix DECIMAL (4,2) NULL, /* 20,21, 19,20 */
  rhumIngre VARCHAR(255) NOT NULL, /* fraise, citron ..*/
  rhumMacer VARCHAR(30) NOT NULL,  /* 1 semaine , 1mois */ 
-constraint pk_tbRhum PRIMARY KEY (rhumId),
-constraint fk_tbRhum_tbNoms FOREIGN KEY (rhumId) REFERENCES tbNoms (nomId)
-constraint fk_tbRhum_tbIngred FOREIGN KEY (rhumId) REFERENCES tbIngred (IngredId)
+constraint pk_tbRhum PRIMARY KEY (rhumId)
 );
+/* MATTHIEU MUTTERER 
+creation de la table contenant les ingredients et leurs prix pour chaque rhum */ 
+CREATE TABLE tbIngredient (
+  ingreId        char(3) NOT NULL,
+  ingrePrix       decimal(6,2) check(@col > 0.0) NULL ,
+  ingreNom    char(30) NOT  NULL,
+  CONSTRAINT pk__tbIngredient PRIMARY KEY (ingreId),
+  CONSTRAINT fk__tbIngredient__tbRhum FOREIGN KEY (ingreId) REFERENCES tbRhum (rhumId)
+  );
