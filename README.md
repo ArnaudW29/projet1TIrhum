@@ -30,7 +30,7 @@ Recette de rhum arrangé.
 	* afficher le temps necessaire pour la recette/temps de fermentation pour que le rhum arrive a maturation
 ## TO DO LIST :
 * **backend** : 
-     * [ ]  Creer les tables SQL.
+     * [x]  Creer les tables SQL.
      * [ ] Creer les services web pour initialiser la page et gérer les requetes/interactions.
      * [ ] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
