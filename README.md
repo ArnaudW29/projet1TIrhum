@@ -17,21 +17,17 @@ Recette de rhum arrangé.
 * Une approximation du prix que le rhum coutera a la fabrication.
 * Affichage du temps de maturation de la recette en fonction de la recette selectionnée.
 * Affichage du temps de creation en fonction de la recette selectionnée.
-* Un systeme de like/dislike en dessous de chaque recette.
 ## Aspects implémentés :
 * **backend** : Une base de données avec les recettes de chaque rhum et le prix de chaque ingredients, ainsi que le temps de maturation et creation.
 * **backend** : Un serveur web capable de fournir les pages html, js, css, ainsi que de proposer des webservices
 * **backend** : Des webservices (avec les procédures associées) :
 	* Un webservice permettant la selection d'un rhum.
-	* Un webservice permettant d'afficher le classement des rhums les plus aimés.
 	* Un webservice permettant d'afficher le prix de chaque ingredients et du total de la recette.
 	* Un webservice permettant d'afficher le temps de maturation/creation du rhum.
-* **frontend** : Une page web (html, js, css) permettant d'appeler les webservices et de traiter les réponses, les utilisants pour modifier la page: 
-	* afficher le classement des rhum les plus aimés	
+* **frontend** : Une page web (html, js, css) permettant d'appeler les webservices et de traiter les réponses, les utilisants pour modifier la page: 	
 	* afficher la recette du rhum
 	* afficher le prix de la recette
 	* afficher le temps necessaire pour la recette/temps de fermentation pour que le rhum arrive a maturation
-	* cliquer sur le like/dislike
 ## TO DO LIST :
 * **backend** : 
      * [ ]  Creer les tables SQL.
@@ -41,5 +37,4 @@ Recette de rhum arrangé.
      * [ ] Creer la page html et le css.
      * [ ] Creer un fichier js permettant:
      - d'initaliser la page et les recettes.
-     - de permettre aux utilisateurs de mettre un Like/Dislike.
      - de créer des recettes.
