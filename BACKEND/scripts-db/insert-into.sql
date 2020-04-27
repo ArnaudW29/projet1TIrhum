@@ -11,17 +11,41 @@ VALUES
 
 /* ARNAUD WAETERMANS 
 insertion des ingredients et prix pour les rhums */
-INSERT INTO tbIngredient (ingreId, ingreNom, ingrePrix)
+INSERT INTO tbIngredient (ingreId, ingreNom,)
 VALUES
-('r01', 'banane' , 1,67),
-('r01', 'gousse de vanille', 5,45),
-('r02', 'fraise' , 5,93),
-('r02', 'citron vert', 5,78),
+(1, 'banane' ),
+(2, 'de vanille'),
+(3, 'fraise' ),
+(4, 'citron vert'),
+/*  a continuer */
+INSERT INTO tbRecette_ingre (recetteId,ingreId,uniteId,quantité)
+VALUES 
+(1,1,5,5), /* 5 banane entiere dans le rhum 1 */
+(1,2,1,1) /* 1 gousse de vanille dans le rhum 1*/
+/*  a continuer */
+INSERT INTO tbUnite(uniteId,uniteNom,uniteSymbole)
+VALUES 
+(1,'Gousse', NULL),
+(2,'Gramme', 'g'),
+(3,'Kilogramme','kg'),
+(4,'Morceau', NULL),
+(5,'entiere', NULL),
+(6,'Litre','L'),
+(7,'Centilitre', 'cl'),
+(8,'Degré', '°')
 /*  a continuer */
 
 /* ARNAUD WAETERMANS
 insertion  de toutes les informations concernant le rhum */
-INSERT INTO tbRhum (rhumId, rhumAjout, rhumPrix, rhumIngre, rhumMacer)
+INSERT INTO tbRhum (rhumId, rhumAjout, rhumPrix,recetteId, rhumMacer,alcoolId, rhumDeroulement)
 VALUES 
-('rO1', 31.12.99, 7,12, 'banane gousse de vanille', '3 mois')
+('rO1', 31.12.99, 7.12, 1, '3 mois', 1 ,NULL)
 /* a continuer */
+
+/* ARNAUD WAETERMANS 
+insertion de tout les rhums disponibles */
+INSERT INTO tbAlcool(alcoolId, alcoolNom, alcoolDegre)
+VALUES 
+(1,'rhum agricole saint james',40)
+(2,'rhum agricole saint james',45)
+(3,'rhum agricole saint james',50)
