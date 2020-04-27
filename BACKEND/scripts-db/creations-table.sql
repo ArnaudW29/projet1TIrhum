@@ -6,7 +6,8 @@ CREATE TABLE tbNoms (
 nomId char(3) NOT NULL,         /*rO1,rO2*/
 nomNom VARCHAR(40) NOT NULL,    /* rhum a la fraise , a la banane */
 constraint pk_Noms PRIMARY KEY (nomId),
-constraint fk_tbNoms_tbRhum FOREIGN KEY (nomId) REFERENCES tbRhum (rhumId)
+constraint fk_tbNoms_tbRhum FOREIGN KEY (nomId) REFERENCES tbRhum (rhumId),
+ON DELETE RESTRICT
 );
 
 /* ARNAUD WAETERMANS 
@@ -18,7 +19,8 @@ CREATE TABLE tbRhum (
  rhumPrix DECIMAL (4,2) NULL, /* 20,21, 19,20 */
  rhumIngre VARCHAR(255) NOT NULL, /* fraise, citron ..*/
  rhumMacer VARCHAR(30) NOT NULL,  /* 1 semaine , 1mois */ 
-constraint pk_tbRhum PRIMARY KEY (rhumId)
+constraint pk_tbRhum PRIMARY KEY (rhumId),
+ON DELETE RESTRICT 
 );
 
 /* MATTHIEU MUTTERER 
@@ -29,5 +31,6 @@ CREATE TABLE tbIngredient (
   ingreNom    char(30) NOT  NULL,
   ingreQte	INTEGER NOT NULL, 
   CONSTRAINT pk__tbIngredient PRIMARY KEY (ingreId),
-  CONSTRAINT fk__tbIngredient__tbRhum FOREIGN KEY (ingreId) REFERENCES tbRhum (rhumId)
+  CONSTRAINT fk__tbIngredient__tbRhum FOREIGN KEY (ingreId) REFERENCES tbRhum (rhumId),
+  ON DELETE RESTRICT
   );
