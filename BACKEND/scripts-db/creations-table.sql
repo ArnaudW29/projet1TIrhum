@@ -4,7 +4,7 @@ Creation de la table contenant les noms des rhums et leurs id */
 
 CREATE TABLE tbNoms (
 nomId char(3) NOT NULL,         /*rO1,rO2*/
-nomNom VARCHAR(40) NOT NULL,
+nomNom VARCHAR(40) NOT NULL,    /* rhum a la fraise , a la banane */
 constraint pk_Noms PRIMARY KEY (nomId),
 constraint fk_tbNoms_tbRhum FOREIGN KEY (nomId) REFERENCES tbRhum (rhumId)
 );
@@ -20,12 +20,14 @@ CREATE TABLE tbRhum (
  rhumMacer VARCHAR(30) NOT NULL,  /* 1 semaine , 1mois */ 
 constraint pk_tbRhum PRIMARY KEY (rhumId)
 );
+
 /* MATTHIEU MUTTERER 
 creation de la table contenant les ingredients et leurs prix pour chaque rhum */ 
 CREATE TABLE tbIngredient (
   ingreId        char(3) NOT NULL,
   ingrePrix       decimal(6,2) check(@col > 0.0) NULL ,
   ingreNom    char(30) NOT  NULL,
+  ingreQte	INTEGER NOT NULL, 
   CONSTRAINT pk__tbIngredient PRIMARY KEY (ingreId),
   CONSTRAINT fk__tbIngredient__tbRhum FOREIGN KEY (ingreId) REFERENCES tbRhum (rhumId)
   );
