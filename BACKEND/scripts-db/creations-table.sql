@@ -1,5 +1,5 @@
 
-/* ARNAUD WAETERMANS 
+/* ARNAUD WAETER%ANS 
 Creation de la table contenant les noms des rhums et leurs id */
 
 CREATE TABLE tbNoms (
@@ -19,17 +19,18 @@ CREATE TABLE tbRhum (
  rhumPrix DECIMAL (4,2) NULL, /* 20.21, 19.20 */
  rhumDeroulement VARCHAR(500) NULL, /* deroulement de la recette */ 
  recetteId INT NOT NULL, /* 1 */
+ alcoolId INT NOT NULL, 
 constraint pk_tbRhum PRIMARY KEY (recetteId),
+CONSTRAINT fk_tbRhum_tbAlcool FOREIGN KEY (alcoolId) REFERENCES tbAlcool (alcoolId),
 constraint fk_tbRhum_tbNoms FOREIGN KEY (rhumId) REFERENCES tbNoms(nomId),
 ON DELETE RESTRICT 
 );
-/* ARNAUD WAETERMANS 
-creation de la table qui permet de construire la recette */ 
+/* ARNAUD WAETERMANS */ 
 CREATE TABLE tbRecette_ingre (
 recetteId INT NOT NULL,
 ingreId  INT NOT NULL,
 uniteId INT NOT NULL,
-quantité INT NOT NULL 
+quantité INT NOT NULL, 
 CONSTRAINT fk_tbRecette_ingre_tbUnite FOREIGN key (uniteId) REFERENCES tbUnite (uniteId),
 CONSTRAINT fk_tbRecette_ingre_tbIngredient FOREIGN key (ingreId) REFERENCES tbIngredient(ingreId),
 CONSTRAINT fk_tbRecette_ingre_tbRhum FOREIGN KEY (recetteId) REFERENCES tbRhum (recetteId)
@@ -43,10 +44,16 @@ CREATE TABLE tbIngredient (
   CONSTRAINT pk__tbIngredient PRIMARY KEY (ingreId),
   ON DELETE RESTRICT,
   );
-  /* ARNAUD WAETERMANS 
-   table repranant les unites et leurs noms ainsi que les symboles */
-  CREATE TABLE tbUnite (
+/* ARNAUD WAETERMANS */
+ CREATE TABLE tbUnite (
 	uniteId INTEGER NOT NULL auto_increment,
 	uniteNom VARCHAR(15) NOT NULL,
 	uniteSymbole VARCHAR(3) NULL,
-	CONSTRAINT pk_tbUnite PRIMARY KEY (uniteId));
+	CONSTRAINT pk_tbUnite PRIMARY KEY (uniteId)
+	);
+/* ARNAUD WAETERMANS */	
+CREATE TABLE tbAlcool(
+	alcoolId INTEGER auto_increment NOT NULL,
+	alcoolNom VARCHAR(50) NOT NULL,
+	alcoolDegre DECIMAL (3,1) NOT NULL
+	);
