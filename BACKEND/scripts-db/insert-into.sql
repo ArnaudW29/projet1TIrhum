@@ -37,9 +37,9 @@ VALUES
 
 /* ARNAUD WAETERMANS
 insertion  de toutes les informations concernant le rhum */
-INSERT INTO tbRhum (rhumId, rhumAjout, rhumPrix,recetteId, rhumMacer,alcoolId, rhumDeroulement)
+INSERT INTO tbRhum (rhumId,recetteId,alcoolId,rhumAjout, rhumPrix, rhumMacer, rhumDeroulement)
 VALUES 
-('rO1', 31.12.99, 7.12, 1, '3 mois', 1 ,NULL)
+('rO1',1, 1, 31.12.99, 7.12,  '3 mois', NULL)
 /* a continuer */
 
 /* ARNAUD WAETERMANS 
