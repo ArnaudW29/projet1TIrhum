@@ -13,7 +13,7 @@ VALUES
 /* ARNAUD WAETERMANS 
 insertion des ingredients et prix pour les rhums */
 
-INSERT INTO tbIngredient (ingreId, ingreNom,)
+INSERT INTO tbIngredient (ingreId, ingreNom)
 VALUES
 (1, 'banane' ),
 (2, 'de vanille'),
