@@ -32,7 +32,7 @@ Recette de rhum arrangé.
 * **backend** : 
      * [x]  Creer les tables SQL.
      * [ ] Creer les services web pour initialiser la page et gérer les requetes/interactions.
-     * [ ] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
+     * [x] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
      * [ ] Creer la page html et le css.
      * [ ] Creer un fichier js permettant:
