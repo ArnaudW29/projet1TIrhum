@@ -48,9 +48,9 @@ VALUES
 
 /* ARNAUD WAETERMANS */
 
-INSERT INTO tbRhum (nomId,recetteId,alcoolId,rhumAjout, rhumPrix, rhumMacer, rhumDeroulement)
+INSERT INTO tbRhum (nomId,recetteId,alcoolId,rhumQte,rhumUnite,rhumAjout, rhumPrix, rhumMacer, rhumDeroulement)
 VALUES 
-(1,1, 1, 1999-12-31, 7.12,  '3 mois', NULL)
+(1,1, 1,75,'cl', 1999-12-31, 7.12,  '3 mois', NULL)
 /* a continuer */
 
 /* ARNAUD WAETERMANS */
