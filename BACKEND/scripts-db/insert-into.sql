@@ -25,11 +25,11 @@ VALUES
 /* ARNAUD WAETERMANS 
 insertion de tout les rhums disponibles */
 
-INSERT INTO tbAlcool(alcoolId, alcoolNom, alcoolDegre)
+INSERT INTO tbAlcool(alcoolId, alcoolNom, alcoolDegre,alcoolQte,uniteId)
 VALUES 
-(1,'rhum agricole saint james',40),
-(2,'rhum agricole saint james',45),
-(3,'rhum agricole saint james',50)
+(1,'rhum agricole saint james',40,75,7),
+(2,'rhum agricole saint james',45,75,7),
+(3,'rhum agricole saint james',50,1,6)
 
 /* ARNAUD WAETERMANS 
 insertion des unites et symboles */
