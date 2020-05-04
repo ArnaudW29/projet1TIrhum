@@ -29,6 +29,7 @@ CREATE TABLE tbAlcool(
 	alcoolId INTEGER  NOT NULL DEFAULT AUTOINCREMENT,
 	alcoolNom VARCHAR(50) NOT NULL,
 	alcoolDegre DECIMAL (3,1) NOT NULL,
+	alcoolQte INTEGER NOT NULL, 
 	constraint pk_tbAlcool PRIMARY KEY (alcoolId)
 	);
 
@@ -38,10 +39,11 @@ CREATE TABLE tbRhum (
  nomId INT  NOT NULL DEFAULT AUTOINCREMENT, 
  recetteId INT NOT NULL, /* 1 */
  alcoolId INT NOT NULL, /* 1 */
+ alcoolQte INT NOT NULL,
  rhumMacer VARCHAR(30) NOT NULL,  /* 1 semaine , 1 mois */ 
  rhumAjout DATETIME,   /*31.12.99  */
  rhumPrix DECIMAL (4,2) NULL, /* 20.21, 19.20 */
- rhumDeroulement VARCHAR(500) NULL, /* deroulement de la recette */ 
+ rhumDeroulement VARCHAR(500) NULL, /* deroulement de la recette */
 constraint pk_tbRhum PRIMARY KEY (recetteId),
 CONSTRAINT fk_tbRhum_tbAlcool FOREIGN KEY (alcoolId) REFERENCES tbAlcool (alcoolId),
 constraint fk_tbRhum_tbNoms FOREIGN KEY (nomId) REFERENCES tbNoms(nomId)
