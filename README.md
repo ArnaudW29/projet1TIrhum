@@ -34,7 +34,7 @@ Recette de rhum arrangé.
      * [ ] Creer les services web pour initialiser la page et gérer les requetes/interactions.
      * [x] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
-     * [ ] Creer la page html et le css.
+     * [x] Creer la page html et le css.
      * [ ] Creer un fichier js permettant:
      - d'initaliser la page et les recettes.
      - de créer des recettes.
