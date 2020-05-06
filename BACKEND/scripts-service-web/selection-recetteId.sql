@@ -1,13 +1,15 @@
 /* ARNAUD WAETERMANS 
 select de la recette en fonction de l'id de celle ci */ 
-
+CREATE PROCEDURE "dba"."init_recette"()
+BEGIN 
+       call sa_set_http_header('Content-Type','application,/json');
+      
 SELECT  
        R.recetteId,  N.nomNom,
-       A.alcoolNom , A.alcoolDegre,
+       A.alcoolNom , A.alcoolDegre,R.rhumQte, R.rhumUnite
        I.ingreNom,
        U.uniteNom,
        Q.quantité
-      
 FROM    
     tbRecette_ingre  Q
         INNER JOIN tbRhum  R 
@@ -20,6 +22,6 @@ FROM
                on N.nomId = R.nomId
         INNER JOIN tbAlcool  A
                on A.alcoolId = R.alcoolId
- 
-               
-Where Q.recetteId = 1;
+ END
+/* service */
+CREATE SERVICE "initRecette" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.init_recette();
