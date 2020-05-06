@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Création de votre propre rhum</title>
+    <link rel="stylesheet" type="text/css" href="css/creeVotreRhum.css" />
+</head>
+<body>
+<h1>Création de votre rhum arrangé</h1>
+<form action="/ma-page-de-traitement" method="post">
+    <div>
+        <label for="name">Nom du rhum :</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="alcool">alccol utilisé parmis les notres :</label>
+        <select id="alcool" name="alcool">
+            <option value="A">rgrez</option>
+            <option value="H" selected>rgegg</option>
+            <option value="N">rgrgrg</option>
+            <option value="W">tg arnaud</option>
+        </select>
+        <select id="uniterA" name="uniterA">
+            <option value="A">L</option>
+            <option value="H" >Cl</option>
+            <option value="N">g</option>
+            <option value="W">Kg</option>
+        </select>
+        <input type="number" id="quantiterA" name="quantiterA">
+
+
+    </div>
+    <div>
+        <label for="ingredient">Ajouter un ingredient :</label>
+        <input type="text" id="ingredient" name="ingredient">
+        <select id="uniter" name="uniter">
+            <option value="A">L</option>
+            <option value="H" >Cl</option>
+            <option value="N">g</option>
+            <option value="W">Kg</option>
+        </select>
+        <label for="quantiter"></label>
+        <input type="number" id="quantiter" name="quantiter">
+        <input class="ajoutIngr"
+               type="button"
+               value="+">
+    </div>
+    <div>
+        <label for="temp">inséré le temp de macération :</label>
+        <input type="text" id="temp" name="temp">
+
+    </div>
+    <div>
+        <label for="prix">prix :</label>
+        <input type="number" id="prix" name="prix">
+    </div>
+    <div>
+        <label for="explication"> La réalisation :</label>
+        <textarea id="explication" name="explication"></textarea>
+    </div>
+    <div>
+        <input id="ajoutForm"
+               type="button"
+               value="Ajouter votre Rhum">
+    </div>
+
+</form>
+
+</body>
+</html>
