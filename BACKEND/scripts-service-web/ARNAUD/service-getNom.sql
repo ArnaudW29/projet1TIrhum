@@ -10,8 +10,8 @@ SELECT
 FROM    
     dba.tbNoms as N
 ORDER BY N.nomNom asc;
- END
+ END;
 /* service */
 
-
+-------------------------------------------------------
 CREATE SERVICE "getNom" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.getNom();
