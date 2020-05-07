@@ -13,4 +13,4 @@ END;
 /* service */
 -----------------------------------------------------------------------------------------------------------------------------------------;
 
-CREATE SERVICE "getNom" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.getAlc();
+CREATE SERVICE "getAlc" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.getAlc();
