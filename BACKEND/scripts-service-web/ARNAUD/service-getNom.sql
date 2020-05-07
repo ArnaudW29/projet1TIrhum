@@ -1,6 +1,6 @@
 
 /* ARNAUD WAETERMANS 
-select de la recette en fonction de l'id de celle ci */ 
+select du nom du rhum et de son id  */ 
 CREATE PROCEDURE "dba"."getNom"()
 BEGIN 
        call sa_set_http_header('Content-Type','application,/json');
