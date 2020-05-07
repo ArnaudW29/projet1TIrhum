@@ -6,7 +6,7 @@ BEGIN
        call sa_set_http_header('Content-Type','application,/json');
       
 SELECT  
-        U.uniteId ,U.uniteNom || ' ' || U.uniteSymbole
+        U.uniteId ,U.uniteNom || '  (' || U.uniteSymbole || ')'
 FROM    
     dba.tbUnite as U
 ORDER BY U.uniteNom asc;
