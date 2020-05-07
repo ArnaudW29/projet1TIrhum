@@ -10,6 +10,14 @@ Nous sommes 2 élèves en TI de l'[Ephec](https://www.ephec.be/)
 * [WAETERMANS Arnaud](https://github.com/ArnaudW29) 1TM2
 ## Description :
 Recette de rhum arrangé.
+## Configuration de la DB : 
+id utilisateur : **dba**
+mdp utisateur  : **sql**
+nom du serveur : **projet**
+nom de la db   : **projet**
+-n projet "C:\Users\lll\Desktop\dbprojet\FRONTEND\projet.db"
+-x tcpip
+-xs http(port=81)
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
 * Un formulaire pour créer sa propre recette et la poster.
