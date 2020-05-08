@@ -1,3 +1,33 @@
+.href{color: white;
+font-size: 20px;}
+#searchbar{
+    position:relative;
+    width: 100%;
+    height:auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.blocAjout{
+
+}
+.ingredient {
+    float: right;
+    margin-top: 20px;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.quantite{
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#ingredient{
+    float: right;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    margin-right: 100px;
+}
 body{
     font-size: 50px;
     margin-top: 20px;
@@ -10,7 +40,7 @@ input{
     font-size: 25px;
     margin-right: 100px;
 }
-#quantiter{
+#quantite{
     width: 50px;
     margin-right: 10px;
     margin-left: 10px;
@@ -22,7 +52,7 @@ textarea{
     font-size: 25px;
     height: 250px;
 }
-#uniter{
+#unite{
     float: right;
     margin-left: 10px;
     margin-top: 20px;
@@ -39,14 +69,14 @@ textarea{
     font-size: 25px;
     margin-right: 100px;
 }
-#uniterA{
+#uniteA{
     float: right;
     margin-left: 10px;
     margin-top: 20px;
     font-size: 25px;
     margin-right: 10px;
 }
-#quantiterA{
+#quantiteA{
     width: 50px;
     margin-right: 10px;
     margin-left: 10px;
