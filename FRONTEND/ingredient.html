@@ -5,25 +5,18 @@
     <meta charset="UTF-8">
     <title>les différents Ingrédients</title>
     <link rel="stylesheet" type="text/css" href="css/ingredient.css" />
+	<script src="js/projets.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="initNom();">
 <div id="searchbar">
-
-    <h1>Quel rhum voulez vous faire</h1>
+<a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
+    <h1>Selectionner une recette de nos rhums </h1>
     <select id="rhumSel" name="alcool">
-        <option value="A">rgrez</option>
-        <option value="H" selected>rgegg</option>
-        <option value="N">rgrgrg</option>
-        <option value="W">tg arnaud</option>
     </select>
 </div>
 <div id="rhum">
-    <h2> Le rhum que vous avez selectionné est : ...</h2>
-    <!--<img src="img/aaa.jpg" alt=" rhum crée" title="rhum crée" /> mettre l'image du rhum!-->
-</div>
-<div id="alcool">
-    <h2 id="titreal"> L'alcool utilisé est le ...</h2>
-    <img src="img/alcool.png" alt=" alcool utilisé" title="alcool utilisé" />
+<h2>Voici la liste d'ingredients et la méthodologie</h2>
 </div>
 <div id="listePop">
     <h2>Ingredients</h2>
