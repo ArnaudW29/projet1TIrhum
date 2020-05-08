@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Création de votre propre rhum</title>
+    <link rel="stylesheet" type="text/css" href="css/creeVotreRhum.css" />
+    <script src="js/projets.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+</head>
+<body onload="initAlc();initUnite();initIngre();">
+<div id="searchbar">
+<a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
+<h1>Création de votre rhum arrangé</h1>
+</div>
+<form action="#" method="get">
+    <div>
+        <label for="name">Nom du rhum :</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="alcool">alcool utilisé parmis les notres :</label>
+        <select id="alcool" name="alcool" required>
+        </select>
+        <select id="uniteA" name="uniteA">
+            <option value="7" selected>Centilitre (cl)</option>
+            <option value="6">Litre (L)</option>
+        </select>
+        <input type="number" id="quantiteA" name="quantiteA" value="75">
+
+
+    </div>
+    <div>
+        <label for="ingredient">Ajouter un ingredient :</label>
+        <select type="text" id="ingredient" name="ingredient" required></select>
+        <select id="unite" name="unite"></select>
+        <label for="quantite"></label>
+        <input type="number" id="quantite" name="quantite" >
+        <input class="ajoutIngr" type="button" value="+" onclick="ajoutIngre()">
+    </div>
+    <div>
+        <label for="temps">inséré le temps de macération :</label>
+        <input type="text" id="temps" name="temps">
+
+    </div>
+    <div>
+        <label for="prix">prix :</label>
+        <input type="number" id="prix" name="prix">
+    </div>
+    <div>
+        <label for="explication"> La réalisation :</label>
+        <textarea id="explication" name="explication"></textarea>
+    </div>
+    <div>
+        <input id="ajoutForm" type="submit" value="Ajouter votre Rhum">
+    </div>
+
+</form>
+
+</body>
+</html>
