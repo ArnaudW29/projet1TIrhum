@@ -6,7 +6,7 @@ BEGIN
       
 SELECT  
        R.recetteId,  N.nomNom,
-       A.alcoolNom , A.alcoolDegre,R.rhumQte, R.rhumUnite
+       A.alcoolNom , A.alcoolDegre,R.rhumQte, R.rhumUnite,
        I.ingreNom,
        U.uniteNom,
        Q.quantité
