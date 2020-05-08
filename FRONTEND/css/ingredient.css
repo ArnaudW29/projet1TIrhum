@@ -1,6 +1,8 @@
+
 body{
     background-image: url("img/fond.jpg");
 }
+.href{color: white;}
 #searchbar{
     position:relative;
     width: 100%;
@@ -38,10 +40,9 @@ ol{
     color: white;
 }
 #rhum{
-    width: 400px;
-    margin-left: 20%;
+    margin-left: 37%;
     float: left;
-    height: 580px;
+    text-align: center;
 }
 #titreal{
     text-align: center;
