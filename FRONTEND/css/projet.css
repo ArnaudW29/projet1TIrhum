@@ -18,7 +18,14 @@ body{
 }
 #ajoutRhum{
     width: 300px ;
-    margin-left: 30%;
+    margin-left: 32%;
+    float: left;
+    height: 580px;
+    font-size: 25px;
+    margin-top: 5%;
+}
+#recetteRhum{
+    width: 300px ;
     float: left;
     height: 580px;
     font-size: 25px;
