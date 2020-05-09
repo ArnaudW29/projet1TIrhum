@@ -20,7 +20,7 @@ Recette de rhum arrangé.
 * -xs http(**port=81**)
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
-* Un formulaire pour créer sa propre recette et la poster.
+* Un formulaire pour créer sa propre recette
 ### FONCTIONNALITES SECONDAIRES : 
 * Une approximation du prix que le rhum coutera a la fabrication.
 * Affichage du temps de maturation de la recette en fonction de la recette selectionnée.
