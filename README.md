@@ -30,7 +30,8 @@ Recette de rhum arrangé.
 * **backend** : Un serveur web capable de fournir les pages html, js, css, ainsi que de proposer des webservices
 * **backend** : Des webservices (avec les procédures associées) :
 	* Un webservice permettant la selection d'un rhum.
-	* Un webservice permettant d'afficher le prix de chaque ingredients et du total de la recette.
+	* Un webservice permettant d'afficher le de la recette.
+	* Un webservice permettant d'afficher le nom de chaque rhum
 	* Un webservice permettant d'afficher le temps de maturation du rhum.
 * **frontend** : Une page web (html, js, css) permettant d'appeler les webservices et de traiter les réponses, les utilisants pour modifier la page: 	
 	* afficher la recette du rhum
@@ -39,7 +40,7 @@ Recette de rhum arrangé.
 	* afficher quel alcool utiliser/quantite/unite/degré de celui ci 
 ## TO DO LIST :
 * **backend** : 
-     * [x]  Creer les tables SQL.
+     * [x] Creer les tables SQL.
      * [x] Creer les services web pour initialiser la page et gérer les requetes/interactions.
      * [x] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
