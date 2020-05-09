@@ -76,33 +76,34 @@ function ajoutIngre(){
 		elem2.after(clone2);
 			clone3.className ='quantite';
 			clone3.id = 'quantite'+ing;
-			clone3.name = 'quantite'+ing;
+			clone3.name = 'quantite'+ing;// dans l'url sans ca on vois que ingredient ? peut etre enlever ?
 			elem3.after(clone3);
 			gid('quantite'+ing).value ="";
 
 }
 let rep="";
 
-function initRecette(valeur){
+function initRecette(){
 	let xhr= new XMLHttpRequest();
 	xhr.open('get',"http://localhost:81/initRecette", true );
 	xhr.onload =
 		function x(){
-			let rep = JSON.parse(xhr.responseText);
-			let str="";
-			for(let i of rep){
-				str += "pour ce rhum on utilise cet alcool "+ valeur.alcoolNom+"";
-			}
-			gid("recette").innerHTML=str;
+			 rep = JSON.parse(xhr.responseText);
 		};
 	xhr.send();
 }
 function affiRecette(){
-   var x = gid('rhumSel').value ;
-   let y =  gid('rhum'+x).innerText;
-   gid('rhum').innerHTML = "<h2> Voici la liste d'ingrédient et la méthodologie pour le " + '<b>'+y + " </b> : </h2>"
-   console.log(y);
-   console.log(x);
-   initRecette(y);
+   let xx = gid('rhumSel').value ;
+   let y =  gid('rhum'+xx).innerText;
+   gid('rhum').innerHTML = "<h2> Voici la liste d'ingrédient et la méthodologie pour le " + '<b>'+y + " </b> : </h2>";
+   for(let x in rep ){
+   	if(rep[x].nomNom === y ){
+   		gid('alcool').innerHTML = "Alcool utilsé : "+ '<b>' +rep[x].rhumQte + " "+ rep[x].rhumUnite + "  de " +rep[x].alcoolNom + " " + rep[x].alcoolDegre+ " °"+ '</b>';
+   		gid('maceration').innerHTML = "Le temps de maceration de ce rhum est de :" +'<b>' + rep[x].rhumMacer + '</b>';
+   		gid('prix').innerHTML = "Le prix du rhum est de : " + '<b>' + rep[x].rhumPrix + '</b>' + " €";
+   		gid('deroulement').innerHTML = "Une description et aide pour effectuer la recette : " + '<b>' + rep[x].rhumDeroulement + '</b>';
+   	}
+   }
+   	console.log(y);
+	console.log(xx);
 }
-
