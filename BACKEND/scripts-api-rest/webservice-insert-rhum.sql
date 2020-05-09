@@ -1,4 +1,4 @@
-CREATE PROCEDURE "dba"."proc_insert_rhum"(in nomNom varchar(40), in alcoolId integer, in rhumUnite varchar(10), in rhumQte integer,in ingreId integer, in uniteId integer,in quantité integer in rhumMacer varchar(30),in rhumPrix decimal(4,2), in rhumDeroulement varchar(500))
+CREATE PROCEDURE "dba"."proc_insert_rhum"(in nomNom varchar(40), in alcoolId integer, in rhumUnite varchar(10), in rhumQte integer,in ingreId integer, in uniteId integer,in quantité integer, in rhumMacer varchar(30),in rhumPrix decimal(4,2), in rhumDeroulement varchar(500))
 BEGIN 
   INSERT INTO dba.tbNoms (nomNom)
   VALUES 
@@ -7,7 +7,7 @@ BEGIN
   VALUES 
   (nomId,alcoolId,rhumQte,'rhumUnite','rhumMacer',rhumPrix,'rhumDeroulement');
   
-  INSERT INTO dba.tbRecette_ingre(ingreId,uniteId,quantité);
+  INSERT INTO dba.tbRecette_ingre(ingreId,uniteId,quantité)
   VALUES 
   (ingreId,uniteId, quantité);
   END;
