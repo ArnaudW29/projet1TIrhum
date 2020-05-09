@@ -12,37 +12,59 @@ body{
 }
 #rhumSel{
     background-repeat: no-repeat;
-    width: 50%;
     height: 35px;
     padding: 0;
     box-shadow: none;
     font-size: 20px;
 }
-#listePop{
-    width: 300px ;
-    margin-left: 40%;
-    text-align: center ;
-    border: 2px solid ;
-    height: 570px;
-    font-size: 25px;
-    margin-top: 10%;
-    color: white;
-}
-#alcool{
-    margin-left: 70%;
+#prix{
     margin-right: 0%;
     width: 800px;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
+    color:white;
+    font-size:25px;
+}
+#alcool{;
+    margin-right: 0%;
+    width: 800px;
+    margin-bottom: 0%;
+    color:white;
+    font-size:25px;
+}
+#maceration{;
+    margin-right: 0%;
+    width: 800px;
+    margin-bottom: 0%;
+    color:white;
+    font-size:25px;
+}
+#deroulement{
+    margin-right: 0%;
+    width: 800px;
+    margin-bottom: 0%;
+    color:white;
+    font-size:25px;
 }
 ol{
     font-size: 30px ;
     text-align: center;
     color: white;
 }
+
+/*#recette{
+    width: 350px ;
+    margin-left: 40%;
+    text-align: center ;
+    border: 2px solid ;
+    height: 570px;
+    font-size: 25px;
+    margin-top: 10%;
+    color: white; }*/
 #rhum{
-    margin-left: 37%;
+    margin-left: 28%;
     float: left;
     text-align: center;
+    color:white;
 }
 #titreal{
     text-align: center;
@@ -54,4 +76,7 @@ h1{
 }
 h2{
     color: white;
+}
+b{
+    color: black;
 }
