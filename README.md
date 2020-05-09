@@ -39,7 +39,7 @@ Recette de rhum arrangé.
 ## TO DO LIST :
 * **backend** : 
      * [x]  Creer les tables SQL.
-     * [ ] Creer les services web pour initialiser la page et gérer les requetes/interactions.
+     * [x] Creer les services web pour initialiser la page et gérer les requetes/interactions.
      * [x] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
      * [x] Creer la page html et le css.
