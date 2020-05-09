@@ -35,7 +35,8 @@ Recette de rhum arrangé.
 * **frontend** : Une page web (html, js, css) permettant d'appeler les webservices et de traiter les réponses, les utilisants pour modifier la page: 	
 	* afficher la recette du rhum
 	* afficher le prix de la recette
-	* afficher le temps necessaire pour la recette/temps de fermentation pour que le rhum arrive a maturation
+	* afficher temps de fermentation pour que le rhum arrive a maturation
+	* afficher quel alcool utiliser/quantite/unite/degré de celui ci 
 ## TO DO LIST :
 * **backend** : 
      * [x]  Creer les tables SQL.
