@@ -10,7 +10,9 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
+
 #rhumSel{
+    text-align: center;
     background-repeat: no-repeat;
     height: 35px;
     padding: 0;
@@ -18,30 +20,37 @@ body{
     font-size: 20px;
 }
 #prix{
-    margin-right: 0%;
+    text-align: center;
     width: 800px;
-    margin-bottom: 0%;
+    margin-left: 27%;
     color:white;
     font-size:25px;
 }
-#alcool{;
-    margin-right: 0%;
+#ingredient{
+    text-align: center;
     width: 800px;
-    margin-bottom: 0%;
+    margin-left: 27%;
+    color: white;
+    font-size:25px;
+}
+#alcool{
+    text-align: center;
+    width: 800px;
+    margin-left: 27%;
     color:white;
     font-size:25px;
 }
-#maceration{;
-    margin-right: 0%;
+#maceration{
+    text-align: center;
+    margin-left: 27%;
     width: 800px;
-    margin-bottom: 0%;
     color:white;
     font-size:25px;
 }
 #deroulement{
-    margin-right: 0%;
+    text-align: center;
     width: 800px;
-    margin-bottom: 0%;
+    margin-left: 27%;
     color:white;
     font-size:25px;
 }
