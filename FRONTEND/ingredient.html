@@ -8,32 +8,22 @@
 	<script src="js/projets.js" type="text/javascript"></script>
     <script src="js/utils.js" type="text/javascript"></script>
 </head>
-<body onload="initNom();">
+<body onload="initNom();initRecette();affiRecette();">
 <div id="searchbar">
 <a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
     <h1>Selectionner une recette de nos rhums </h1>
-    <select id="rhumSel" name="alcool">
-    </select>
+    <select id="rhumSel" name="alcool" onchange="affiRecette();"></select>
 </div>
 <div id="rhum">
-<h2>Voici la liste d'ingredients et la méthodologie</h2>
-</div>
-<div id="listePop">
-    <h2>Ingredients</h2>
-    <ol>
-        <li> pppp</li>
-        <li>5545</li>
-        <li> pppp</li>
-        <li>5545</li>
-        <li> pppp</li>
-        <li>5545</li>
-        <li> pppp</li>
-        <li>5545</li>
-        <li> pppp</li>
-        <li>5545</li>
-    </ol>
-</div>
 
+</div>
+<div id="recette">
+    <p id="alcool"></p>
+    <p id="maceration"></p>
+    <p id="prix"></p>
+    <p id="deroulement"></p>
+
+</div>
 
 </body>
 </html>
