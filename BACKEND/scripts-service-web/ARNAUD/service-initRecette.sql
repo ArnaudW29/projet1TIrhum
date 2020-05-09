@@ -4,20 +4,16 @@ CREATE PROCEDURE "dba"."init_recette"()
 BEGIN 
        call sa_set_http_header('Content-Type','application,/json');
       
-SELECT  
-       R.recetteId,  N.nomNom,
-       A.alcoolNom , A.alcoolDegre,R.rhumQte, R.rhumUnite,
-       I.ingreNom,
-       U.uniteNom,
-       Q.quantité
+SELECT DISTINCT 
+       N.nomNom,N.nomId,
+       A.alcoolNom , A.alcoolDegre,R.rhumQte, R.rhumUnite, R.rhumDeroulement, R.rhumMacer, R.rhumPrix
+     
 FROM    
     tbRecette_ingre  Q
         INNER JOIN tbRhum  R 
                on R.recetteId = Q.recetteId
         INNER JOIN tbIngredient  I
                on I.ingreId = Q.ingreId
-        INNER JOIN tbUnite  U 
-               on U.uniteId = Q.uniteId
         INNER JOIN tbNoms  N 
                on N.nomId = R.nomId
         INNER JOIN tbAlcool  A
