@@ -31,7 +31,7 @@ Recette de rhum arrangé.
 * **backend** : Des webservices (avec les procédures associées) :
 	* Un webservice permettant la selection d'un rhum.
 	* Un webservice permettant d'afficher le prix de chaque ingredients et du total de la recette.
-	* Un webservice permettant d'afficher le temps de maturation/creation du rhum.
+	* Un webservice permettant d'afficher le temps de maturation du rhum.
 * **frontend** : Une page web (html, js, css) permettant d'appeler les webservices et de traiter les réponses, les utilisants pour modifier la page: 	
 	* afficher la recette du rhum
 	* afficher le prix de la recette
