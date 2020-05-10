@@ -35,7 +35,7 @@ CREATE TABLE tbAlcool(
 /* ARNAUD WAETERMANS 
 creation de la table du rhum */
 CREATE TABLE tbRhum (
- nomId INT  NOT NULL DEFAULT AUTOINCREMENT, 
+ nomId INT  NOT NULL, 
  recetteId INT NOT NULL, /* 1 */
  alcoolId INT NOT NULL, /* 1 */
  rhumQte INT NOT NULL,
