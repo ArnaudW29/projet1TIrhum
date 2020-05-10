@@ -45,6 +45,6 @@ Recette de rhum arrangé.
      * [x] Creer les procédures pour charger les fichiers html/css/js ainsi que pour traiter les réponses et requetes.
 * **frontend** : 
      * [x] Creer la page html et le css.
-     * [ ] Creer un fichier js permettant:
+     * [x] Creer un fichier js permettant:
      - d'initaliser la page et les recettes.
      - de créer des recettes.
