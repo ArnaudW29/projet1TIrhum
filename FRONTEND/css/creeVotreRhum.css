@@ -21,6 +21,9 @@ font-size: 20px;}
     margin-right: 10px;
     margin-left: 10px;
 }
+#idnom{
+    width: 50px
+}
 #ingredient{
     float: right;
     margin-left: 10px;
@@ -39,6 +42,13 @@ input{
     float: right;
     font-size: 25px;
     margin-right: 100px;
+}
+#rhumSel{
+    margin-top: 20px;
+    float: right;
+    font-size: 25px;
+    margin-right: 100px;
+    width: auto;
 }
 #quantite{
     width: 50px;
@@ -88,4 +98,14 @@ h1{
 #ajoutForm{
     float: left;
     width: 100%;
+}
+#ajoutForm2{
+    float: left;
+    width: 100%;
+}
+#idrecette{
+    width: 50px;
+}
+#ingredientId{
+    width: 50px;
 }
