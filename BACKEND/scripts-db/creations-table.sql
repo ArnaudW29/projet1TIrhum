@@ -52,7 +52,7 @@ constraint fk_tbRhum_tbNoms FOREIGN KEY (nomId) REFERENCES tbNoms(nomId)
 /* ARNAUD WAETERMANS 
 creation de la table de la recette */
 CREATE TABLE tbRecette_ingre (
-recetteId INT NOT NULL,
+recetteId INT NOT NULL DEFAULT AUTOINCREMENT,
 ingreId  INT NOT NULL,
 uniteId INT NOT NULL,
 quantité INT NOT NULL,
