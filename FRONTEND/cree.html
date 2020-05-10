@@ -7,48 +7,54 @@
     <script src="js/projets.js" type="text/javascript"></script>
     <script src="js/utils.js" type="text/javascript"></script>
 </head>
-<body onload="initAlc();initUnite();initIngre();">
+<body onload="initAlc();initUnite();initIngre();initRecette();">
 <div id="searchbar">
 <a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
 <h1>Création de votre rhum arrangé</h1>
 </div>
-<form action="#" method="get">
+<form action="#" onsubmit="submitForm()">
     <div>
         <label for="name">Nom du rhum :</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required onchange="minId()">
+    </div>
+    <div>
+        <label for="idnom">Id du rhum : </label>
+        <input type="number" name="idnom" id="idnom"  step="1"  required onchange="idRecetteChanger(this);minId()">
+    </div>
+    <div>
+        <label for="idrecette">Id de la recette : </label>
+        <input type="number" name="idrecette" id="idrecette" required step="1"  onchange="idRecetteChanger2(this);minId()">
     </div>
     <div>
         <label for="alcool">alcool utilisé parmis les notres :</label>
         <select id="alcool" name="alcool" required>
         </select>
-        <select id="uniteA" name="uniteA">
-            <option value="7" selected>Centilitre (cl)</option>
-            <option value="6">Litre (L)</option>
+        <select id="uniteA" name="uniteA" required>
+            <option value="cl" selected>Centilitre (cl)</option>
+            <option value="L">Litre (L)</option>
         </select>
-        <input type="number" id="quantiteA" name="quantiteA" value="75">
-
-
+        <input type="number" id="quantiteA" name="quantiteA" value="75" required>
     </div>
     <div>
         <label for="ingredient">Ajouter un ingredient :</label>
         <select type="text" id="ingredient" name="ingredient" required></select>
-        <select id="unite" name="unite"></select>
+        <select id="unite" name="unite" required></select>
         <label for="quantite"></label>
-        <input type="number" id="quantite" name="quantite" >
-        <input class="ajoutIngr" type="button" value="+" onclick="ajoutIngre()">
+        <input type="number" id="quantite" name="quantite" step="1" min="1" required>
+      <!--  <input class="ajoutIngr" type="button" value="+" onclick="ajoutIngre()"> -->
     </div>
     <div>
         <label for="temps">inséré le temps de macération :</label>
-        <input type="text" id="temps" name="temps">
+        <input type="text" id="temps" name="temps" required>
 
     </div>
     <div>
         <label for="prix">prix :</label>
-        <input type="number" id="prix" name="prix">
+        <input type="number" id="prix" name="prix" step="any"required min="1" max="25">
     </div>
     <div>
         <label for="explication"> La réalisation :</label>
-        <textarea id="explication" name="explication"></textarea>
+        <textarea id="explication" name="explication" required></textarea>
     </div>
     <div>
         <input id="ajoutForm" type="submit" value="Ajouter votre Rhum">
