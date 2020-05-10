@@ -8,29 +8,31 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
-#rhumSel{
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 35px;
-    padding: 0;
-    box-shadow: none;
-    font-size: 20px;
-}
 #ajoutRhum{
-    width: 300px ;
-    margin-left: 32%;
+    background-color: wheat;
+    width: 285px ;
+    margin-left: 25%;
     float: left;
-    height: 580px;
+    height: 200px;
     font-size: 25px;
     margin-top: 5%;
 }
 #recetteRhum{
-    width: 300px ;
+    background-color: wheat;
+    width: 290px ;
     float: left;
-    height: 580px;
+    height: 200px;
     font-size: 25px;
     margin-top: 5%;
 }
+#ajoutIngredient{
+    background-color: wheat;
+     width: 295px ;
+     float: left;
+     height: 200px;
+     font-size: 25px;
+     margin-top: 5%;
+ }
 #alcool{
     margin-left: 70%;
     margin-right: 0%;
