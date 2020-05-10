@@ -5,3 +5,6 @@ BEGIN
   (idnom,idrecette,alcool,quantiteA,uniteA,temps,prix,explication);
 
   END;
+  
+  ----------------------------------------------------------------------------------------------------
+CREATE SERVICE "proc_insert_rhumModif" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS call dba.proc_insert_rhumModif(:idnom,:idrecette,:alcool,:quantiteA,:uniteA,:temps,:prix,:explication);
