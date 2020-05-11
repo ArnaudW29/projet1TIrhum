@@ -35,13 +35,13 @@ insertion des unites et symboles */
 
 INSERT INTO tbUnite(uniteId,uniteNom,uniteSymbole)
 VALUES 
-(1,'Gousse', NULL),
-(2,'Gramme', 'g'),
-(3,'Kilogramme','kg'),
-(4,'Morceau', NULL),
+(1,'gousse', NULL),
+(2,'gramme', 'g'),
+(3,'kilogramme','kg'),
+(4,'morceau', NULL),
 (5,'entiere', NULL),
 (6,'Litre','L'),
-(7,'Centilitre', 'cl'),
+(7,'centilitre', 'cl'),
 (8,'entier',NULL)
 /*  a continuer */
 
