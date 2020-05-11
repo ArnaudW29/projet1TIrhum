@@ -5,7 +5,7 @@ INSERT INTO tbNoms(nomId, nomNom)
 VALUES 
 (1, 'Rhum a la banane'),
 (2, 'Rhum a la fraise et citron vert'),
-(3, 'Rhum au piment oiseau'),
+(3, 'Rhum au piment oiseau')
 
 /* ARNAUD WAETERMANS 
 insertion des ingredients et prix pour les rhums */
@@ -51,7 +51,7 @@ INSERT INTO tbRhum (nomId,recetteId,alcoolId,rhumQte,rhumUnite, rhumPrix, rhumMa
 VALUES 
 (1,1, 1,75,'cl', 7.12,  '3 mois','couper les bananes en tranches et les inserer dans un fond de rhum ajouter une gousse de vanille couper en tranche'),
 (2,2, 2,1,'L',10,'2 mois', 'couper les fraises en tranches presser les citrons vert pour y mettre le jus'),
-(3,3,1,75,'cl',7,32,' 1 semaine', 'faire des petits trous dans les piments puis les mettres dans le rhum ajouter du gingembre couper en tranche')
+(3,3,1,75,'cl',7.32,' 1 semaine', 'faire des petits trous dans les piments puis les mettres dans le rhum ajouter du gingembre couper en tranche')
 /* a continuer */
 
 /* ARNAUD WAETERMANS */
