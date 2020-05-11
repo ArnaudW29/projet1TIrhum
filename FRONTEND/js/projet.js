@@ -133,9 +133,21 @@ function affiRecetteIdReverse(id) {
 	let xx = gid(id).value;
 	gid('rhumSel').value = xx
 }
+function affiRecetteIdReverse2() {
+	let xx = gid('rhumSel').value;
+	gid('idrecette').value = xx
+}
 function maxId(id) {
 	let max="";
 	for(let x in rep ){
+		max++
+	}
+	var input = gid(id);
+	input.setAttribute("max",max);
+}
+function maxId2(id) {
+	let max="";
+	for(let x in nomId ){
 		max++
 	}
 	var input = gid(id);
@@ -150,6 +162,15 @@ function minId() {
 	console.log(min);
 	var input = gid('idnom');
 	input.setAttribute("min",min);
+}function minId2(Id) {
+	let min="";
+	for(let x in nomId ){
+		min++
+	}
+	min += 1;
+	console.log(min);
+	var input = gid('id');
+	input.setAttribute("value",min);
 }
 function minIdIngre(){
 	let min="";
