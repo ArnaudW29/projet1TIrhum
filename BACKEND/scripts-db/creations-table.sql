@@ -14,6 +14,7 @@ CREATE TABLE tbIngredient (
   ingreId    INT NOT NULL ,
   ingreNom    varchar(30) NOT  NULL ,
   CONSTRAINT pk__tbIngredient PRIMARY KEY (ingreId),
+  CONSTRAINT "pk_tbIngredientNom" UNIQUE ( "ingreNom" ASC )
   );
 /* ARNAUD WAETERMANS 
 creation de la table avec les unites */
