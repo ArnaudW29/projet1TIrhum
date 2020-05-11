@@ -60,5 +60,5 @@ quantité INT NOT NULL,
 CONSTRAINT "pk_tbRecette_ingre" PRIMARY KEY ( "recetteId" ASC, "ingreId" ASC ),
 CONSTRAINT fk_tbRecette_ingre_tbRhum FOREIGN KEY (recetteId) REFERENCES tbRhum (recetteId),
 CONSTRAINT fk_tbRecette_ingre_tbUnite FOREIGN key (uniteId) REFERENCES tbUnite (uniteId),
-CONSTRAINT fk_tbRecette_ingre_tbIngredient FOREIGN key (ingreId) REFERENCES tbIngredient(ingreId),
+CONSTRAINT fk_tbRecette_ingre_tbIngredient FOREIGN key (ingreId) REFERENCES tbIngredient(ingreId)
 );
