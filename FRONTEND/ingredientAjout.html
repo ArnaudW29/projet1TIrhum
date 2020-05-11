@@ -12,7 +12,7 @@
     <a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
     <h1>Ajoutez des ingredients a une recette ou dans notre base de données</h1>
 </div>
-<div> <select id="rhumSel" name="alcool" onchange="affiRecetteId()"></select></div>
+<div> <select id="rhumSel" name="alcool" onchange="affiRecetteId('rhumSel');affiRecetteIdReverse2()"></select></div>
 <form action="#" onsubmit="submitForm2();">
     <div><br>
         <label for="ingredient">Ajouter un ingredient dans la recette:</label>
@@ -23,7 +23,7 @@
     </div>
     <div>
         <label for="idrecette">Id de recette :</label>
-        <input type="number" id="idrecette" name="idrecette" step="1" min="1"  required onchange="affiRecetteIdReverse();maxId();">
+        <input type="number" id="idrecette" name="idrecette" step="1" min="1"  required onchange="affiRecetteIdReverse('idrecette');maxId2('idrecette');">
         <input id="ajoutForm" type="submit" value="Actualiser une recette">
     </div>
 </form>
