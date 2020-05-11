@@ -27,6 +27,7 @@ Recette de rhum arrangé.
 ## Détail DB : 
 -tbAlcool :
 Il s'agit de la tables des alcools
+
 pk = alcoolId
 Cette table comprend 3 colonnes : 
 * alcoolId qui est auto incrmentée et un integer.
@@ -35,7 +36,9 @@ Cette table comprend 3 colonnes :
 
 -tbIngredient : 
 Il s'agit de la tables des ingredients
+
 pk = ingreId
+
 clé d'unicite = ingreNom (evite doublons de noms meme si pas la même id)
 Cette table comprend 2 colonnes :
 * ingreId qui est un integer.
@@ -44,7 +47,9 @@ Cette table comprend 2 colonnes :
 
 -tbNoms :
 Il s'agit de la table des nom de rhums
+
 pk = nomId
+
 clé d'unicite = nomNom (evite doublons de noms meme si pas la même id)
 Cette table comprend 2 colonnes : 
 * nomId qui est un integer.
@@ -53,6 +58,7 @@ Cette table comprend 2 colonnes :
 
 -tbUnite
 Il s'agit de la table des unites et de leur symboles
+
 pk = uniteId
 Cette table comprend 3 colonnes : 
 * uniteId qui est un integer autoincrement.
@@ -62,9 +68,13 @@ Cette table comprend 3 colonnes :
 
 -tbRecette_ingre
 Il s'agit de la table qui sert a construire la recette d'ingredient de chaque rhum
+
 pk = ingreId,recetteId 
+
 fk = ingreId > tbIngredient.ingreId
+
 fk = uniteId > tbUnite.uniteId
+
 fk = recetteId > tbRhum.recetteId
 Cette table comprend 4 colonnes : 
 * recetteId qui est un integer.
@@ -75,8 +85,11 @@ Cette table comprend 4 colonnes :
 
 -tbRhum
 Il s'agit de la table qui regroupe toutes les infromations de la confection du rhum
+
 pk = recetteId
+
 fk = alcoolId > tbAlcool.alcoolId
+
 fk = nomId > tbNoms.nomId
 Cette table comprend 8 colonnes : 
 * nomId qui est un integer.
