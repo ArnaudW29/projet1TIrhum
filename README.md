@@ -70,7 +70,7 @@ Cette table comprend 3 colonnes :
 * uniteSymbole qui est un varchar(3) NULL regroupant les symboles des unités si elles en ont.
 
 
-### ### -tbRecette_ingre
+### -tbRecette_ingre
 Il s'agit de la table qui sert a construire la recette d'ingredient de chaque rhum
 
 pk = ingreId,recetteId 
