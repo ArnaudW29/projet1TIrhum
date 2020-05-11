@@ -18,6 +18,8 @@ Recette de rhum arrangé.
 * -n projet "C:\Users\lll\Desktop\dbprojet\FRONTEND\projet.db"
 * -x tcpip
 * -xs http(**port=81**)
+## Shema relationnel :
+![image du shema relatioinnel](https://i.imgur.com/e9dyFFF.png)
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
 * Un formulaire pour créer sa propre recette
