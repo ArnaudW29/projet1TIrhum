@@ -3,7 +3,7 @@
 select des unites  et de leurs  id  */ 
 CREATE PROCEDURE "dba"."getUnite"()
 BEGIN 
-       call sa_set_http_header('Content-Type','application,/json');
+       call sa_set_http_header('Content-Type','application/json');
       
 SELECT  
         U.uniteId ,U.uniteNom || '  (' || U.uniteSymbole || ')' as UniteSymbole
