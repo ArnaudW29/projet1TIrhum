@@ -3,7 +3,7 @@
 select du nom du rhum et de son id  */ 
 CREATE PROCEDURE "dba"."getNom"()
 BEGIN 
-       call sa_set_http_header('Content-Type','application,/json');
+       call sa_set_http_header('Content-Type','application/json');
       
 SELECT  
         N.nomId ,N.nomNom
