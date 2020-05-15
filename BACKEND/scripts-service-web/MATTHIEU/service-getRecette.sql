@@ -1,6 +1,6 @@
 CREATE PROCEDURE "dba"."getRecette"()
 BEGIN 
-  call sa_set_http_header('Content-Type','application,/json');
+  call sa_set_http_header('Content-Type','application/json');
   
   
 SELECT  
