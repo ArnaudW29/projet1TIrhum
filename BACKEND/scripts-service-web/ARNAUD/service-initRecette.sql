@@ -2,7 +2,7 @@
 select de la recette en fonction de l'id de celle ci */ 
 CREATE PROCEDURE "dba"."init_recette"()
 BEGIN 
-       call sa_set_http_header('Content-Type','application,/json');
+       call sa_set_http_header('Content-Type','application/json');
       
 SELECT DISTINCT 
        N.nomNom,N.nomId,
