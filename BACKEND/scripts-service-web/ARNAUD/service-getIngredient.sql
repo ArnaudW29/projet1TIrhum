@@ -2,7 +2,7 @@
 select du nom des  ingredients et de leurs  id  */ 
 CREATE PROCEDURE "dba"."getIngredient"()
 BEGIN 
-       call sa_set_http_header('Content-Type','application,/json');
+       call sa_set_http_header('Content-Type','application/json');
       
 SELECT  
         I.ingreId ,I.ingreNom
