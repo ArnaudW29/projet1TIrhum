@@ -2,7 +2,7 @@
 select de l'alcool et l'id de celui ci  */ 
 CREATE PROCEDURE "dba"."getAlc"()
 BEGIN 
-       call sa_set_http_header('Content-Type','application,/json');
+       call sa_set_http_header('Content-Type','application/json');
       
 SELECT  
         A.alcoolId ,A.alcoolNom || ' ' || A.alcoolDegre as NomDegr
