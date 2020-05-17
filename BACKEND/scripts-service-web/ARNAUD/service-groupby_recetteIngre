@@ -1,9 +1,13 @@
-CREATE PROCEDURE "dba"."groupby_recetteingre"()
+CREATE PROCEDURE "DBA"."groupby_recetteingre"(in cnt integer )
 BEGIN 
     call sa_set_http_header('Content-Type','application/json');
 
-SELECT recetteId ,count(*) as nbr FROM tbRecette_ingre GROUP BY recetteId
+SELECT recetteId  ,count(*) as nbr FROM tbRecette_ingre GROUP BY recetteId 
+
+having count(*) = cnt
 order by recetteId
 END;
-------------------------------------------------------------------------------
-CREATE SERVICE "groupby_recetteingre" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.groupby_recetteingre();
+
+
+----------------------------------------------------------------------
+CREATE SERVICE "groupby_recetteingre" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call dba.groupby_recetteingre(:cnt);
