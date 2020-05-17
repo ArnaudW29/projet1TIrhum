@@ -13,14 +13,14 @@
 <h1>Ajout de votre rhum arrangé</h1>
 </div>
 
-<form action="#" onsubmit="submitForm()">
+<form action="#" onsubmit="submitForm();reloadP() ;return false">
     <div>
         <label for="name">Nom du rhum :</label>
         <input type="text" id="name" name="name" required onchange="minId()">
     </div>
     <div>
         <label for="idnom">Id du rhum : </label>
-        <input type="number" name="idnom" id="idnom"  step="1"  required onchange="minId();minId2('idnom')">
+        <input type="number" name="idnom" id="idnom"  step="1"  required onchange="minId();maxId3nomId('idnom');">
         <input id="ajoutForm" type="submit" value="Ajouter votre Rhum">
     </div>
     <div><label for="rhumSel">Selectionner le rhum a update :</label>
@@ -28,7 +28,7 @@
 
     </div>
 </form>
-<form action="#" onsubmit="submitForm4()">
+<form action="#" onsubmit="submitForm4();reloadP(); return false">
     <div>
         <input type="number" name="idnom" id="idrhum"  step="1" min="1" required onchange="maxId2('idrhum');idRecetteChanger(this);affiRecetteIdReverse('idrhum');">
         <label for="idrecette">Id de recette :</label>
