@@ -89,29 +89,16 @@ function initIngreRec(){
 		};
 	xhr.send();
 }
-function ajoutIngre(){ //fonction qui permet de creer plus de champs d'input quand on clique sur un boutton
+ /* function ajoutIngre(id){ //fonction qui permet de creer plus de champs d'input quand on clique sur un boutton
 	ing++;
-	let elem = qs('#ingredient');
-	let elem2 = qs('#unite');
-	let elem3 = qs('#quantite');
+	let elem = qs(id);
 	let clone = elem.cloneNode(true);
-	let clone2 = elem2.cloneNode(true);
-	let clone3 = elem3.cloneNode(true);
-	clone.className ='ingredient';
-	clone.id = 'ingredient'+ing;
-	clone.name ='ingredient'+ing; // dans l'url sans ca on vois que ingredient ? peut etre enlever ?
+	clone.className =id;
+	clone.id = id+ing;
+	clone.name =id+ing;
 	elem.after(clone);
-	gid('ingredient'+ing).value ="";
-		clone2.className = 'unite';
-		clone2.id = 'unite'+ing;
-		clone.name ='unite'+ing;// dans l'url sans ca on vois que ingredient ? peut etre enlever ?
-		elem2.after(clone2);
-			clone3.className ='quantite';
-			clone3.id = 'quantite'+ing;
-			clone3.name = 'quantite'+ing;// dans l'url sans ca on vois que ingredient ? peut etre enlever ?
-			elem3.after(clone3);
-			gid('quantite'+ing).value ="";
-}
+	gid(id+ing).value ="";
+} */
 function affiRecette(){ // fonction qui sert a afficher les informations quand on selectionne un rhum dans une liste deroulante avec un onchange
    let xx = gid('rhumSel').value ;
    let y =  gid('rhum'+xx).innerText;
@@ -152,6 +139,23 @@ function maxId2(id) {
 	}
 	var input = gid(id);
 	input.setAttribute("max",max);
+}function maxId3nomId(id) {
+	let max="";
+	for(let x in nomId ){
+		max++
+	}
+	max += 1;
+	var input = gid(id);
+	input.setAttribute("max",max);
+}
+function maxIdIngre(id){
+	let max="";
+	for(let x in ingreId ){
+		max++
+	}
+	max += 1;
+	var input = gid(id);
+	input.setAttribute("max",max);
 }
 function minId() {
 	let min="";
@@ -172,13 +176,13 @@ function minId() {
 	var input = gid('id');
 	input.setAttribute("value",min);
 }
-function minIdIngre(){
+function minIdIngre(id){
 	let min="";
 	for(let x in ingreId ){
 		min++
 	}
 	min += 1;
-	var input = gid('ingredientId');
+	var input = gid(id);
 	input.setAttribute("min",min);
 }
 function idRecetteChanger(input1) {
@@ -207,6 +211,11 @@ function envoisIngre(nom,nomId){
 	xhr.onload= function(){
 		console.log(url);
 	};
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			alert("Envoyé, reload la page."); // C'est bon \o/
+		}
+	};
 	xhr.open('get', `proc_insert_rhum?name=${nom}&idnom=${nomId}`, true);
 	xhr.onerror = function(){
 		console.log("erreur")
@@ -216,7 +225,14 @@ function envoisIngre(nom,nomId){
 function envoisIngre2(ingredient,unite,quantite,idrecette){
 	let xhr = new XMLHttpRequest();
 	let url = 'proc_insert_ingredient?ingredient='+ingredient+'&unite='+unite+'&quantite='+quantite+'&idrecette='+idrecette;
-	xhr.onload=function () {console.log(url);
+	xhr.onload=
+		function () {
+		console.log(url);
+	};
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			alert("Envoyé, reload la page."); // C'est bon \o/
+		}
 	};
 	xhr.open('get','proc_insert_ingredient?ingredient='+ingredient+'&unite='+unite+'&quantite='+quantite+'&idrecette='+idrecette,true)
 	xhr.onerror=function () {
@@ -227,8 +243,14 @@ xhr.send();
 function envoisIngre3(ingredient,idingredient){
 	let xhr = new XMLHttpRequest();
 	let url ='proc_insert_ingredientId?ingredient='+ingredient+'&idingredient='+idingredient;
-	xhr.onload = function() {
+	xhr.onload =
+		function() {
 		console.log(url);
+	};
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			alert("Envoyé, reload la page."); // C'est bon \o/
+		}
 	};
 	xhr.open('get','proc_insert_ingredientId?ingredient='+ingredient+'&idingredient='+idingredient);
 	xhr.onerror=function (){
@@ -242,6 +264,11 @@ function envoisIngre4(idnom,idrecette,alcool,quantiteA,uniteA,temps,prix,explica
 	xhr.onload= function() {
 		console.log(url);
 	};
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			alert("Envoyé, reload la page."); // C'est bon \o/
+		}
+	};
 	xhr.open('get','proc_insert_rhumModif?idnom='+idnom+'&idrecette='+idrecette+'&alcool='+alcool+'&quantiteA='+quantiteA+'&uniteA='+uniteA+'&temps='+temps+'&prix='+prix +'&explication='+explication,true)
 	xhr.onerror = function (){
 		console.log("xhr error");
@@ -253,9 +280,9 @@ function submitForm(){
 		gid('idnom').value)
 }
 function submitForm2(){
-	envoisIngre2(gid('quantite').value,
+	envoisIngre2(gid('ingredient').value,
 		gid('unite').value,
-		gid('ingredient').value,
+		gid('quantite').value,
 		gid('idrecette').value)
 }
 function submitForm3(){
@@ -271,4 +298,7 @@ function submitForm4(){
 		gid('temps').value,
 		gid('prix').value,
 		gid('explication').value)
+}
+function reloadP(){
+	window.location.reload()
 }
