@@ -1,0 +1,8 @@
+CREATE PROCEDURE "dba"."groupby_recetteingre"()
+BEGIN 
+    call sa_set_http_header('Content-Type','application/json');
+
+SELECT recetteId ,count(*) FROM tbRecette_ingre GROUP BY recetteId
+END;
+------------------------------------------------------------------------------
+CREATE SERVICE "groupby_recetteingre" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.groupby_recetteingre();
