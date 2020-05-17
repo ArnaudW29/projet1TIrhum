@@ -4,6 +4,7 @@ let rep="";
 let ingr="";
 let ingreId="";
 let nomId="";
+let groupby="";
 function initNom(){
 	let xhr= new XMLHttpRequest();
 	xhr.open('get',"http://localhost:81/getNom", true);
@@ -89,6 +90,34 @@ function initIngreRec(){
 		};
 	xhr.send();
 }
+function initGroupBy(){
+	let xhr = new XMLHttpRequest();
+	xhr.open('get', "http://localhost:81/groupby_recetteingre",true);
+	xhr.onload =
+		function x() {
+		groupby = JSON.parse(xhr.responseText);
+		let rep = JSON.parse(xhr.responseText);
+		let str = "";
+		for(let i of rep){
+			str += "<option value ='"+i.recetteId +"' id='"+ "recette"+i.recetteId+"'>"+ i.nbr + "</option>";
+		}
+		gid('recetteNbr').innerHTML = str;
+		};
+	xhr.send();
+}
+function affiGroupBy(){
+	let xx = gid('recetteNbr').value;
+	let y = gid('recette'+xx).innerText;
+	let z = Number(gid('recetteNbr').value);
+	gid('groupbyNbr').innerHTML = "<h2> Voici la liste des recettes avec " + '<b>' + y +  " ingredients "+ " </b> :"+ " </h2>"
+	console.log(xx+"id");
+	console.log(y+" affi");
+	for(let x in groupby){
+		if(groupby[x].recetteId === z){
+			gid('nom').innerHTML = "Nom de la recette : " + '<b>' + rep[x].nomNom + '</b>'
+		}
+	}
+}
  /* function ajoutIngre(id){ //fonction qui permet de creer plus de champs d'input quand on clique sur un boutton
 	ing++;
 	let elem = qs(id);
@@ -116,13 +145,15 @@ function affiRecetteId(id){ //affiche l'id d'une recette selectionner avec un on
 	let xx = gid('rhumSel').value ;
 	gid(id).value = xx;
 }
-function affiRecetteIdReverse(id) {
+function affiRecetteIdReverse(id,reverse) {
 	let xx = gid(id).value;
-	gid('rhumSel').value = xx
+	gid(reverse).value = xx
 }
-function affiRecetteIdReverse2() {
-	let xx = gid('rhumSel').value;
-	gid('idrecette').value = xx
+
+function affiRecetteIdReverse2(id,reverse) {
+	let xx = gid(id).value;
+	gid(reverse).value = xx;
+	return affiRecette(),cleanIngre(),affiIngredient(),affiGroupBy()
 }
 function maxId(id) {
 	let max="";
