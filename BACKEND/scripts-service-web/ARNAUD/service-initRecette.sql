@@ -18,6 +18,7 @@ FROM
                on N.nomId = R.nomId
         INNER JOIN tbAlcool  A
                on A.alcoolId = R.alcoolId
+   order by N.nomId
  END;
 /* service */
 CREATE SERVICE "initRecette" TYPE 'JSON' AUTHORIZATION OFF USER "dba" URL ON METHODS 'GET' AS call dba.init_recette();
