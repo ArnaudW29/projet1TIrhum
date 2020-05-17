@@ -10,7 +10,44 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
+#nbringr{
+    text-align: center;
+    width: 800px;
+    color:white;
+    font-size:25px;
+}
+#groupby{
+    position:relative;
+    width: 100%;
+    height:auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#groupbyNbr{
+    position:relative;
+    width: 100%;
+    height:auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#nom{
 
+    text-align: center;
+    width: 800px;
+    margin-left: 27%;
+    color:white;
+    font-size:25px;
+}
+
+
+#recetteNbr{
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 35px;
+    padding: 0;
+    box-shadow: none;
+    font-size: 20px;
+}
 #rhumSel{
     text-align: center;
     background-repeat: no-repeat;
@@ -54,7 +91,18 @@ body{
     color:white;
     font-size:25px;
 }
-
+#nbr{
+    width: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px
+}
+#ajoutForm{
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px
+}
 #rhum{
     margin-left: 28%;
     float: left;
