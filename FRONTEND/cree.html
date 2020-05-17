@@ -30,9 +30,9 @@
 </form>
 <form action="#" onsubmit="submitForm4();reloadP(); return false">
     <div>
-        <input type="number" name="idnom" id="idrhum"  step="1" min="1" required onchange="maxId2('idrhum');idRecetteChanger(this);affiRecetteIdReverse('idrhum');">
+        <input type="number" name="idnom" id="idrhum"  step="1" min="1" required onchange="maxId2('idrhum');idRecetteChanger(this);affiRecetteIdReverse('idrhum','idrecette');affiRecetteIdReverse('idrhum','rhumSel')">
         <label for="idrecette">Id de recette :</label>
-        <input type="number" id="idrecette" name="idrecette" step="1" min="1"  required onchange="affiRecetteIdReverse('idrecette');maxId2('idrecette');idRecetteChanger2(this)">
+        <input type="number" id="idrecette" name="idrecette" step="1" min="1"  required onchange="affiRecetteIdReverse('idrecette','idrhum');affiRecetteIdReverse('idrecette','rhumSel');maxId2('idrecette');idRecetteChanger2(this)">
   <br>  <label for="alcool">alcool utilisé parmis les notres :</label>
     <select id="alcool" name="alcool" required>
     </select>
