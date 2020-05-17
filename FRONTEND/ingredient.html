@@ -8,12 +8,21 @@
 	<script src="js/projets.js" type="text/javascript"></script>
     <script src="js/utils.js" type="text/javascript"></script>
 </head>
-<body onload="initNom();initRecette();affiRecette();initIngreRec();">
+<body onload="initNom();initRecette();affiRecette();initIngreRec();initGroupBy();affiGroupBy()">
 <div id="searchbar">
 <a href="http://localhost:81/page?url=projet" class="href">Page d'acceuil</a>
     <h1>Selectionner une recette de nos rhums </h1>
-    <select id="rhumSel" name="alcool" onchange="affiRecette();cleanIngre();affiIngredient();"></select>
+    <select id="rhumSel" name="alcool" onchange="affiRecette();cleanIngre();affiIngredient();affiRecetteIdReverse2('rhumSel','recetteNbr')"></select>
 
+</div>
+<div id="groupby">
+    <h1> Selectionner une recette en fonction du nombre d'ingredient</h1>
+    <select id="recetteNbr" name="recetteNbr" onchange="affiGroupBy();affiRecetteIdReverse2('recetteNbr','rhumSel')"></select>
+</div>
+<div id="groupbyNbr">
+</div>
+<div id="group">
+    <p id="nom"></p>
 </div>
 <div id="rhum">
 
