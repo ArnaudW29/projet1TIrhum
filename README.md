@@ -86,19 +86,19 @@ Cette table comprend 8 colonnes :
 * **proc_insert_rhumModif(:idnom,:idrecette,:alcool,:quantiteA,:uniteA,:temps,:explication)**  
 *Procedure qui permet de completer une recette de rhum en fonction de son ID et ajouter l'alcool utiliser  
 la quantite utiliser,l'unité, le temps de maceration nécessaire et les explications et la stocker dans notre base de donnée.*
-* **getIngredient()**
+* **getIngredient()**  
 *Procedure qui donne les ingredients et leurs ID.*
-* **getNom()**
+* **getNom()**  
 *Procedure qui donne les noms des rhums et leurs ID.*
-* **getUnite()**
+* **getUnite()**  
 *Procedure qui donne les unites et leurs ID.*
-* **getAlc()**
+* **getAlc()**  
 *Procedure qui donne les noms des alcools leurs ID et leurs degrés.*
-* **groupby_recetteingre(:cnt)**
+* **groupby_recetteingre(:cnt)**  
 *Procedure qui recupere une variable via un formulaire et qui renvois le nombre de recette avec le nombre d'ingredient défini par la variable (cnt).*
-* **init_recette()**
+* **init_recette()**  
 *Procedure qui donne le nom et l'id du rhum ainsi que le nom, les degrés , l'unité, la quantité, le deroulement, le prix et le temps de maceration de l'alcool.*
-* **getRecette()**
+* **getRecette()**  
 *Procedure qui donne le nom et l'id du rhum ainsi que l'id de la recette et les noms des ingredients leurs unités et quantités.*
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
