@@ -76,6 +76,17 @@ Cette table comprend 8 colonnes :
 * **rhumMacer** qui est un varchar(30) qui regroupe le temps de maceration de chaque rhums
 * **rhumPrix** qui est un decimal(4,2) NULL  qui regroupe le prix de chaque rhum
 * **rhumDeroulement** qui est un varchar(500) NULL qui regroupe une petite explication de chaque rhum
+## Détail API-REST :
+* **proc_insert_ingredient(:ingredient,:unite,:quantite,:idrecette)**  
+*Procedure qui permet d'inserer des ingredients dans une recette.*
+* **proc_insert_rhum(:name,:idnom)**  
+*Procedure qui permet de creer un nouveau nom de rhum et son id.*
+* **proc_insert_ingredientId(:ingredient,:idingredient)**  
+*Procedure qui permet d'ajouter des ingredients dans notre base de donnée.*
+* **proc_insert_rhumModif(:idnom,:idrecette,:alcool,:quantiteA,:uniteA,:temps,:explication)**  
+*Procedure qui permet de completer une recette de rhum en fonction de son ID et ajouter l'alcool utiliser  
+la quantite utiliser,l'unité, le temps de maceration nécessaire et les explications.*
+
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
 * Un formulaire pour créer sa propre recette
