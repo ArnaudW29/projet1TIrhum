@@ -30,7 +30,6 @@ Cette table comprend 3 colonnes :
 * **alcoolId** qui est auto incrmentée et un integer.
 * **alcoolNom** qui est un varchar(50) regroupant les noms des alcools.
 * **alcoolDegre** qui est un decimal(3,1) regroupant les degres d'alcool pour chaque alcool. 
-
 ### -tbIngredient : 
 Il s'agit de la tables des ingredients  
 pk = ingreId  
@@ -38,7 +37,6 @@ clé d'unicite = ingreNom (evite doublons de noms meme si pas la même id)
 Cette table comprend 2 colonnes :
 * **ingreId** qui est un integer.
 * **ingreNom** qui est un varchar(30) regroupant les noms de chaques ingredients.
-
 ### -tbNoms :
 Il s'agit de la table des nom de rhums  
 pk = nomId  
@@ -46,7 +44,6 @@ clé d'unicite = nomNom (evite doublons de noms meme si pas la même id)
 Cette table comprend 2 colonnes : 
 * **nomId** qui est un integer.
 * **nomNom** qui est un varchar(40) regroupant les noms des rhums.
-
 ### -tbUnite
 Il s'agit de la table des unites et de leur symboles  
 pk = uniteId  
@@ -54,7 +51,6 @@ Cette table comprend 3 colonnes :
 * **uniteId** qui est un integer autoincrement.
 * **uniteNom** qui est un varchar(15) regroupant les noms des unités.
 * **uniteSymbole** qui est un varchar(3) NULL regroupant les symboles des unités si elles en ont.
-
 ### -tbRecette_ingre
 Il s'agit de la table qui sert a construire la recette d'ingredient de chaque rhum  
 pk = ingreId,recetteId  
@@ -66,7 +62,6 @@ Cette table comprend 4 colonnes :
 * **ingreId** qui est un integer.
 * **uniteId** qui est un integer.
 * **quantité** qui est un integer qui reprend les quantites utilsés.
-
 ### -tbRhum
 Il s'agit de la table qui regroupe toutes les infromations de la confection du rhum  
 pk = recetteId  
@@ -81,7 +76,6 @@ Cette table comprend 8 colonnes :
 * **rhumMacer** qui est un varchar(30) qui regroupe le temps de maceration de chaque rhums
 * **rhumPrix** qui est un decimal(4,2) NULL  qui regroupe le prix de chaque rhum
 * **rhumDeroulement** qui est un varchar(500) NULL qui regroupe une petite explication de chaque rhum
-
 ### FONCTIONNALITES PRINCIPALES : 
 * Mettre a disposition une liste de recette de rhum arrangé avec tous les ingredients ainsi que la quantité.
 * Un formulaire pour créer sa propre recette
