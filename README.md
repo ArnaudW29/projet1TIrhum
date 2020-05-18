@@ -14,11 +14,9 @@ Recette de rhum arrangé.
 * id utilisateur : **dba**
 * mdp utisateur  : **sql**
 * nom du serveur : **projet**
-* nom de la db   : **projet**
+* nom de la db   : **projet**  
 
-
--serviceweb
-
+-serviceweb :
 * -n projet "C:\Users\lll\Desktop\dbprojet\FRONTEND\projet.db"
 * -x tcpip
 * -xs http(**port=81**)
@@ -36,12 +34,9 @@ Cette table comprend 3 colonnes :
 * **alcoolDegre** qui est un decimal(3,1) regroupant les degres d'alcool pour chaque alcool. 
 
 ### -tbIngredient : 
-Il s'agit de la tables des ingredients
-
-pk = ingreId
-
-clé d'unicite = ingreNom (evite doublons de noms meme si pas la même id)
-
+Il s'agit de la tables des ingredients  
+pk = ingreId  
+clé d'unicite = ingreNom (evite doublons de noms meme si pas la même id)  
 Cette table comprend 2 colonnes :
 * **ingreId** qui est un integer.
 * **ingreNom** qui est un varchar(30) regroupant les noms de chaques ingredients.
