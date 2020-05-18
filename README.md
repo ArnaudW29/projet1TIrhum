@@ -24,10 +24,8 @@ Recette de rhum arrangé.
 ![image du shema relatioinnel](https://i.imgur.com/e9dyFFF.png)
 ## Détail DB : 
 ### -tbAlcool :
-Il s'agit de la tables des alcools
-
-pk = alcoolId
-
+Il s'agit de la tables des alcools  
+pk = alcoolId  
 Cette table comprend 3 colonnes : 
 * **alcoolId** qui est auto incrmentée et un integer.
 * **alcoolNom** qui est un varchar(50) regroupant les noms des alcools.
